@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Question ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hearts"></div>
+
+  <section id="questionPage" class="page active">
+    <div class="card">
+      <div class="emoji">💌</div>
+      <h1>A little question...</h1>
+      <p class="question">Will you go for Go-carting with me? ❤️</p>
+      <p class="small-text">Choose wisely... 👀</p>
+
+      <div class="buttons">
+        <button id="yesBtn" type="button">YES ❤️</button>
+        <button id="noBtn" type="button">NO 🙈</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="datePage" class="page">
+    <div class="card">
+      <div class="emoji">🥰</div>
+      <h1>Yay! ❤️</h1>
+      <p>Okay, now let's choose when.</p>
+
+      <div class="form-group">
+        <label for="date">📅 Choose a date</label>
+        <input type="date" id="date" required>
+      </div>
+
+      <div class="form-group">
+        <label for="time">⏰ Choose a time</label>
+        <input type="time" id="time" required>
+      </div>
+
+      <button id="confirmBtn" class="continue-btn" type="button">
+        Confirm Date ❤️
+      </button>
+    </div>
+  </section>
+
+  <section id="thankYouPage" class="page">
+    <div class="card final-card">
+      <div class="big-heart">❤️</div>
+      <h1>It's a Date! 🥰</h1>
+      <p class="final-message">Thank you ❤️</p>
+      <p>I'm really looking forward to it.</p>
+
+      <div class="date-box">
+        <p>📅 <span id="selectedDate"></span></p>
+        <p>⏰ <span id="selectedTime"></span></p>
+      </div>
+
+      <p class="ending">See you then. ❤️</p>
+      <div class="floating-hearts">❤️ 💕 ❤️ 💕 ❤️</div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
