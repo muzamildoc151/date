@@ -1,67 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>A Little Question ❤️</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Adventure ✨</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="hearts"></div>
+<div class="sparkles"></div>
 
-  <section id="questionPage" class="page active">
-    <div class="card">
-      <div class="emoji">💌</div>
-      <h1>A little question...</h1>
-      <p class="question">Will you go for Go-carting with me? ❤️</p>
-      <p class="small-text">Choose wisely... 👀</p>
-
-      <div class="buttons">
-        <button id="yesBtn" type="button">YES ❤️</button>
-        <button id="noBtn" type="button">NO 🙈</button>
-      </div>
+<section id="questionPage" class="page active">
+  <div class="card">
+    <div class="icon">🏎️</div>
+    <span class="eyebrow">THE FIRST QUESTION</span>
+    <h1>Will you go<br><span>Go-Carting</span> with me?</h1>
+    <p class="sub">A little speed, a little competition... and hopefully a lot of fun. 😌</p>
+    <div class="choice-buttons">
+      <button class="yes-btn" id="yesBtn">YES, LET'S GO! ❤️</button>
+      <button class="no-btn" id="noBtn">No 🙈</button>
     </div>
-  </section>
+    <p class="tiny">Choose carefully... the NO button is suspicious 👀</p>
+  </div>
+</section>
 
-  <section id="datePage" class="page">
-    <div class="card">
-      <div class="emoji">🥰</div>
-      <h1>Yay! ❤️</h1>
-      <p>Okay, now let's choose when.</p>
+<section id="datePage" class="page">
+  <div class="card">
+    <div class="icon">📅</div>
+    <span class="eyebrow">LET'S PLAN IT</span>
+    <h1>When should we<br><span>race?</span></h1>
+    <p class="sub">You pick the day. I'll handle the rest. ✨</p>
+    <div class="input-group"><label for="date">Date</label><input type="date" id="date"></div>
+    <div class="input-group"><label for="time">Time</label><input type="time" id="time"></div>
+    <button class="main-btn" id="dateBtn">That's the plan →</button>
+  </div>
+</section>
 
-      <div class="form-group">
-        <label for="date">📅 Choose a date</label>
-        <input type="date" id="date" required>
-      </div>
+<section id="dinnerPage" class="page">
+  <div class="card restaurant-card">
+    <div class="icon">🍽️</div>
+    <span class="eyebrow">ROUND TWO</span>
+    <h1>And after the race...<br><span>Dinner?</span></h1>
+    <p class="sub">You get to choose where we eat. No pressure... 👀</p>
 
-      <div class="form-group">
-        <label for="time">⏰ Choose a time</label>
-        <input type="time" id="time" required>
-      </div>
-
-      <button id="confirmBtn" class="continue-btn" type="button">
-        Confirm Date ❤️
-      </button>
+    <div class="restaurant-grid">
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Café Aylanto"><span class="restaurant-content"><b>Café Aylanto</b><small>Gulberg · Mediterranean / Italian</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Monal Lahore"><span class="restaurant-content"><b>Monal Lahore</b><small>Liberty · Rooftop / Pakistani / Asian</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Andaaz Restaurant"><span class="restaurant-content"><b>Andaaz Restaurant</b><small>Walled City · Rooftop / Pakistani</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Arcadian Café"><span class="restaurant-content"><b>Arcadian Café</b><small>Gulberg · Asian Fusion / Continental</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="English Tea House"><span class="restaurant-content"><b>English Tea House</b><small>Gulberg · Café / Tea House</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Café Zouk"><span class="restaurant-content"><b>Café Zouk</b><small>Gulberg · Continental</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Fuoco"><span class="restaurant-content"><b>Fuoco</b><small>Gulberg · Modern European</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Paola's Cosa Nostra"><span class="restaurant-content"><b>Paola's Cosa Nostra</b><small>Gulberg · Italian</small></span></label>
     </div>
-  </section>
 
-  <section id="thankYouPage" class="page">
-    <div class="card final-card">
-      <div class="big-heart">❤️</div>
-      <h1>It's a Date! 🥰</h1>
-      <p class="final-message">Thank you ❤️</p>
-      <p>I'm really looking forward to it.</p>
+    <button class="main-btn" id="restaurantBtn">Perfect choice ✨</button>
+  </div>
+</section>
 
-      <div class="date-box">
-        <p>📅 <span id="selectedDate"></span></p>
-        <p>⏰ <span id="selectedTime"></span></p>
-      </div>
-
-      <p class="ending">See you then. ❤️</p>
-      <div class="floating-hearts">❤️ 💕 ❤️ 💕 ❤️</div>
+<section id="summaryPage" class="page">
+  <div class="card">
+    <div class="icon">🥂</div>
+    <span class="eyebrow">THE PLAN IS SET</span>
+    <h1>So it's a<br><span>date?</span> 👀</h1>
+    <div class="summary-box">
+      <p>🏎️ <b>Go-Carting</b></p>
+      <p>📅 <span id="summaryDate"></span></p>
+      <p>⏰ <span id="summaryTime"></span></p>
+      <p>🍽️ <span id="summaryRestaurant"></span></p>
     </div>
-  </section>
+    <p class="sub">Honestly... I think this is going to be fun. ❤️</p>
+    <button class="main-btn" id="thankBtn">Thank You 💖</button>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="finalPage" class="page">
+  <div class="card final-card">
+    <div class="celebrate">✨🏎️🍽️✨</div>
+    <span class="eyebrow">CONFIRMED</span>
+    <h1>Thank <span>You</span> ❤️</h1>
+    <p class="final-text">For saying yes to the race,<br>choosing the dinner spot,<br>and making this little plan possible. 🥹</p>
+    <div class="final-line">Now all that's left is...</div>
+    <div class="big-text">SHOWING UP. 😌</div>
+    <p class="tiny">I'll see you at the starting line. 🏁</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>

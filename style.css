@@ -1,191 +1,44 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  min-height: 100vh;
-  overflow: hidden;
-  background: linear-gradient(135deg, #ff758c, #ff7eb3);
-  color: #333;
-}
-
-.page {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  opacity: 0;
-  pointer-events: none;
-  transform: scale(.95);
-  transition: all .45s ease;
-}
-
-.page.active {
-  opacity: 1;
-  pointer-events: auto;
-  transform: scale(1);
-}
-
-.card {
-  width: 100%;
-  max-width: 450px;
-  background: rgba(255,255,255,.96);
-  padding: 45px 30px;
-  border-radius: 25px;
-  text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,.2);
-  position: relative;
-  z-index: 10;
-}
-
-.emoji {
-  font-size: 60px;
-  margin-bottom: 15px;
-}
-
-h1 {
-  font-size: 36px;
-  color: #e63967;
-  margin-bottom: 20px;
-}
-
-.question {
-  font-size: 23px;
-  font-weight: bold;
-  line-height: 1.4;
-  margin-bottom: 12px;
-}
-
-.small-text {
-  color: #777;
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  min-height: 55px;
-  position: relative;
-}
-
-button {
-  border: 0;
-  border-radius: 30px;
-  padding: 15px 30px;
-  font-size: 17px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: transform .2s ease;
-}
-
-#yesBtn {
-  background: #e63967;
-  color: white;
-}
-
-#yesBtn:hover {
-  transform: scale(1.08);
-}
-
-#noBtn {
-  background: #eee;
-  color: #555;
-}
-
-.form-group {
-  text-align: left;
-  margin: 20px 0;
-}
-
-label {
-  display: block;
-  margin-bottom: 8px;
-  font-weight: bold;
-  color: #555;
-}
-
-input {
-  width: 100%;
-  padding: 14px;
-  border: 2px solid #ffd0dc;
-  border-radius: 12px;
-  font-size: 16px;
-  outline: none;
-}
-
-input:focus {
-  border-color: #e63967;
-}
-
-.continue-btn {
-  background: #e63967;
-  color: white;
-  margin-top: 10px;
-}
-
-.continue-btn:hover {
-  transform: scale(1.05);
-}
-
-.big-heart {
-  font-size: 80px;
-  animation: heartbeat 1.2s infinite;
-}
-
-.final-message {
-  font-size: 24px;
-  font-weight: bold;
-  color: #e63967;
-  margin: 15px 0;
-}
-
-.date-box {
-  background: #fff0f4;
-  border-radius: 15px;
-  padding: 15px;
-  margin: 25px 0;
-  color: #555;
-  font-size: 18px;
-}
-
-.date-box p {
-  margin: 8px;
-}
-
-.ending {
-  font-size: 20px;
-  font-weight: bold;
-  color: #e63967;
-}
-
-.floating-hearts {
-  margin-top: 25px;
-  font-size: 25px;
-  animation: float 2s infinite ease-in-out;
-}
-
-@keyframes heartbeat {
-  0%,100% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-}
-
-@keyframes float {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-@media (max-width: 500px) {
-  .card { padding: 35px 22px; }
-  h1 { font-size: 30px; }
-  .question { font-size: 21px; }
-  .emoji { font-size: 50px; }
-  button { padding: 13px 24px; }
-}
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;overflow:hidden;font-family:Poppins,sans-serif;color:#fff;background:radial-gradient(circle at 15% 20%,rgba(255,55,125,.45),transparent 30%),radial-gradient(circle at 85% 15%,rgba(100,70,255,.55),transparent 30%),radial-gradient(circle at 50% 100%,rgba(255,183,77,.30),transparent 35%),linear-gradient(135deg,#09001a,#230046 48%,#070018)}
+.page{position:absolute;inset:0;min-height:100vh;padding:18px;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transform:scale(.94) translateY(18px);transition:.65s ease}
+.page.active{opacity:1;pointer-events:auto;transform:scale(1) translateY(0)}
+.card{width:min(94vw,650px);max-height:94vh;overflow-y:auto;padding:42px 34px;text-align:center;border-radius:30px;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.24);box-shadow:0 30px 90px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.15);backdrop-filter:blur(20px)}
+.icon{font-size:70px;margin-bottom:10px;animation:float 2.3s ease-in-out infinite}
+.eyebrow{display:block;color:#ffd66e;font-size:11px;font-weight:700;letter-spacing:4px;margin-bottom:15px}
+h1{font-family:'Cormorant Garamond',serif;font-size:clamp(45px,9vw,72px);line-height:.94;margin-bottom:18px}
+h1 span{background:linear-gradient(90deg,#ffe38b,#ff77c8,#ae9bff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:rgba(255,255,255,.78);line-height:1.7;font-size:14px;margin-bottom:28px}
+.tiny{color:rgba(255,255,255,.48);font-size:11px;margin-top:18px}
+.choice-buttons{display:flex;justify-content:center;gap:14px;min-height:58px;position:relative}
+button{border:none;cursor:pointer;font-family:Poppins,sans-serif;font-weight:700;border-radius:999px;padding:15px 25px;transition:.25s ease}
+.yes-btn,.main-btn{color:#28062e;background:linear-gradient(90deg,#ffe58b,#ff9bd7);box-shadow:0 10px 30px rgba(255,120,195,.3)}
+.yes-btn:hover,.main-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 16px 40px rgba(255,120,195,.48)}
+.no-btn{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.2)}
+.main-btn{margin-top:12px;min-width:210px}
+.input-group{text-align:left;margin:15px 0}
+.input-group label{display:block;font-size:13px;font-weight:600;margin-bottom:7px;color:#ffd9ee}
+input[type=date],input[type=time]{width:100%;border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:14px;font:inherit;background:rgba(255,255,255,.12);color:white;outline:none}
+input[type=date]::-webkit-calendar-picker-indicator,input[type=time]::-webkit-calendar-picker-indicator{filter:invert(1)}
+.restaurant-card{max-width:760px}
+.restaurant-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
+.restaurant-option{cursor:pointer;text-align:left}
+.restaurant-option input{display:none}
+.restaurant-content{display:block;padding:15px;min-height:78px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);transition:.25s ease}
+.restaurant-content b{display:block;font-size:14px;color:white;margin-bottom:5px}
+.restaurant-content small{display:block;color:rgba(255,255,255,.55);font-size:10px;line-height:1.4}
+.restaurant-option input:checked+.restaurant-content{border-color:#ffd66e;background:linear-gradient(135deg,rgba(255,214,110,.18),rgba(255,112,191,.15));box-shadow:0 0 22px rgba(255,214,110,.15);transform:translateY(-2px)}
+.summary-box{text-align:left;padding:22px;margin:22px 0;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}
+.summary-box p{padding:9px 0;border-bottom:1px solid rgba(255,255,255,.08);color:rgba(255,255,255,.84)}
+.summary-box p:last-child{border-bottom:0}
+.final-card{padding:55px 35px}
+.celebrate{font-size:42px;margin-bottom:15px;animation:pulse 1.8s infinite}
+.final-text{font-size:16px;line-height:1.9;color:rgba(255,255,255,.8)}
+.final-line{margin-top:28px;color:#ffd66e;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.big-text{margin:8px 0 10px;font-size:clamp(28px,7vw,48px);font-weight:700;background:linear-gradient(90deg,#ffe58b,#ff83cf,#b79cff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.sparkles:before,.sparkles:after{content:"✦  ✧  •  ✦  ♥  ✧  •  ✦";position:fixed;width:120%;left:-10%;color:rgba(255,255,255,.25);font-size:16px;letter-spacing:22px;animation:drift 9s linear infinite;pointer-events:none}
+.sparkles:before{top:12%}.sparkles:after{top:78%;animation-delay:-4s}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+@keyframes drift{from{transform:translateX(-4%);opacity:.2}50%{opacity:.55}to{transform:translateX(8%);opacity:.2}}
+@media(max-width:600px){.page{padding:12px}.card{padding:34px 20px}.icon{font-size:58px}.restaurant-grid{grid-template-columns:1fr}.choice-buttons{flex-direction:column;align-items:center}.choice-buttons button{width:100%}.main-btn{width:100%}}
