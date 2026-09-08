@@ -41,4 +41,16 @@ input[type=date]::-webkit-calendar-picker-indicator,input[type=time]::-webkit-ca
 @keyframes float{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-12px) rotate(2deg)}}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
 @keyframes drift{from{transform:translateX(-4%);opacity:.2}50%{opacity:.55}to{transform:translateX(8%);opacity:.2}}
+.progress{position:fixed;top:22px;left:50%;transform:translateX(-50%);display:flex;gap:9px;z-index:60}
+.progress .dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.22);transition:.4s ease}
+.progress .dot.active{background:linear-gradient(90deg,#ffe58b,#ff83cf);width:22px;border-radius:5px;box-shadow:0 0 12px rgba(255,131,207,.6)}
+.progress .dot.done{background:rgba(255,214,110,.55)}
+.fun-fact{min-height:20px;font-size:12.5px;color:#ffd9ee;margin:-6px 0 14px;opacity:0;transform:translateY(4px);transition:.35s ease}
+.fun-fact.show{opacity:1;transform:translateY(0)}
+.other-input{display:none;width:100%;border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:14px;font:inherit;background:rgba(255,255,255,.12);color:white;outline:none;margin:-6px 0 14px}
+.other-input.show{display:block}
+.other-input:focus{border-color:#ffd66e}
+.countdown{margin:10px 0 4px;font-size:13px;color:rgba(255,255,255,.65);letter-spacing:.5px}
+.trail-dot{position:fixed;pointer-events:none;border-radius:50%;z-index:40;transition:opacity .6s ease,transform .6s ease}
+.card{transition:transform .65s ease,box-shadow .65s ease}
 @media(max-width:600px){.page{padding:12px}.card{padding:34px 20px}.icon{font-size:58px}.restaurant-grid{grid-template-columns:1fr}.choice-buttons{flex-direction:column;align-items:center}.choice-buttons button{width:100%}.main-btn{width:100%}}

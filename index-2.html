@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Little Adventure ✨</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="sparkles"></div>
+<div class="progress" id="progress">
+  <span class="dot active" data-step="1"></span>
+  <span class="dot" data-step="2"></span>
+  <span class="dot" data-step="3"></span>
+  <span class="dot" data-step="4"></span>
+  <span class="dot" data-step="5"></span>
+</div>
+
+<section id="questionPage" class="page active">
+  <div class="card">
+    <div class="icon">🏎️</div>
+    <span class="eyebrow">THE FIRST QUESTION</span>
+    <h1>Will you go<br><span>Go-Carting</span> with me?</h1>
+    <p class="sub">A little speed, a little competition... and hopefully a lot of fun. 😌</p>
+    <div class="choice-buttons">
+      <button class="yes-btn" id="yesBtn">YES, LET'S GO! ❤️</button>
+      <button class="no-btn" id="noBtn">No 🙈</button>
+    </div>
+    <p class="tiny" id="dodgeCounter">Choose carefully... the NO button is suspicious 👀</p>
+  </div>
+</section>
+
+<section id="datePage" class="page">
+  <div class="card">
+    <div class="icon">📅</div>
+    <span class="eyebrow">LET'S PLAN IT</span>
+    <h1>When should we<br><span>race?</span></h1>
+    <p class="sub">You pick the day. I'll handle the rest. ✨</p>
+    <div class="input-group"><label for="date">Date</label><input type="date" id="date"></div>
+    <div class="input-group"><label for="time">Time</label><input type="time" id="time"></div>
+    <button class="main-btn" id="dateBtn">That's the plan →</button>
+  </div>
+</section>
+
+<section id="dinnerPage" class="page">
+  <div class="card restaurant-card">
+    <div class="icon">🍽️</div>
+    <span class="eyebrow">ROUND TWO</span>
+    <h1>And after the race...<br><span>Dinner?</span></h1>
+    <p class="sub">You get to choose where we eat. No pressure... 👀</p>
+
+    <div class="restaurant-grid">
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Café Aylanto" data-fact="Great pick if you're both indecisive — the menu somehow covers three continents. 🌍"><span class="restaurant-content"><b>Café Aylanto</b><small>Gulberg · Mediterranean / Italian</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Monal Lahore" data-fact="Rooftop views + a skyline sunset. Bring your A-game small talk. 🌆"><span class="restaurant-content"><b>Monal Lahore</b><small>Liberty · Rooftop / Pakistani / Asian</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Andaaz Restaurant" data-fact="Walled City charm — old-world Lahore with a rooftop view of the Badshahi Mosque. 🕌"><span class="restaurant-content"><b>Andaaz Restaurant</b><small>Walled City · Rooftop / Pakistani</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Arcadian Café" data-fact="Cozy and low-key — good for actually hearing each other talk. 🎧"><span class="restaurant-content"><b>Arcadian Café</b><small>Gulberg · Asian Fusion / Continental</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="English Tea House" data-fact="Tea and pastries — the classy, unhurried option. ☕"><span class="restaurant-content"><b>English Tea House</b><small>Gulberg · Café / Tea House</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Café Zouk" data-fact="A local favorite for a reason — reliably good, every time. 👌"><span class="restaurant-content"><b>Café Zouk</b><small>Gulberg · Continental</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Fuoco" data-fact="Modern European plating — good if you want the 'fancy date' photo. 📸"><span class="restaurant-content"><b>Fuoco</b><small>Gulberg · Modern European</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Paola's Cosa Nostra" data-fact="Bold Italian flavor and a name that sounds like a heist movie. 🍝"><span class="restaurant-content"><b>Paola's Cosa Nostra</b><small>Gulberg · Italian</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Butlers Chocolate Café" data-fact="Dessert-first energy. No judgment if this becomes the whole meal. 🍫"><span class="restaurant-content"><b>Butlers Chocolate Café</b><small>Gulberg · Café / Desserts</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Yum Chinese Restaurant" data-fact="Classic Chinese comfort food — reliable, cozy, no surprises. 🥡"><span class="restaurant-content"><b>Yum Chinese Restaurant</b><small>Gulberg · Chinese</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Salt'n Pepper Village" data-fact="Big portions, buffet energy — come hungry after all that racing. 🍛"><span class="restaurant-content"><b>Salt'n Pepper Village</b><small>Multiple · Pakistani / Continental</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Haveli Restaurant" data-fact="Fort Road Food Street, overlooking the Badshahi Mosque at night. 🏰"><span class="restaurant-content"><b>Haveli Restaurant</b><small>Food Street · Pakistani</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Cuckoo's Den" data-fact="Quirky, artsy, and full of character — a bit like this form. 🎨"><span class="restaurant-content"><b>Cuckoo's Den</b><small>Food Street · Rooftop / Pakistani</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Spice Bazaar" data-fact="Fortress Stadium buffet — good if neither of us can decide on one cuisine. 🌶️"><span class="restaurant-content"><b>Spice Bazaar</b><small>Fortress Stadium · Buffet</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Bundu Khan" data-fact="A Lahore classic. Bring extra napkins for the karahi. 🍖"><span class="restaurant-content"><b>Bundu Khan</b><small>Multiple · BBQ / Pakistani</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Nando's Lahore" data-fact="Peri-peri and no small talk needed about spice level — you'll know. 🌶️"><span class="restaurant-content"><b>Nando's Lahore</b><small>DHA · Peri-Peri / Grill</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Okra Restaurant" data-fact="Trendy, plated well, great for the 'we're fancy now' phase. 🌿"><span class="restaurant-content"><b>Okra Restaurant</b><small>Gulberg · Modern Continental</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Mocca Coffee" data-fact="If dinner turns into 'just coffee,' this is where we end up. ☕"><span class="restaurant-content"><b>Mocca Coffee</b><small>DHA · Café</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Yumm!" data-fact="The name is doing a lot of confidence, and it delivers. 😋"><span class="restaurant-content"><b>Yumm!</b><small>Gulberg · Pakistani / Fast Food</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Village Restaurant" data-fact="Traditional decor, folk music some nights — a whole vibe. 🎶"><span class="restaurant-content"><b>Village Restaurant</b><small>Multiple · Traditional Pakistani</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Tuscany Courtyard" data-fact="Outdoor seating under fairy lights. Very 'first date' coded. ✨"><span class="restaurant-content"><b>Tuscany Courtyard</b><small>DHA · Italian / Continental</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="La Farine" data-fact="Bakery-café hybrid — good if we want dessert to double as dinner. 🥐"><span class="restaurant-content"><b>La Farine</b><small>DHA · Bakery / Café</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Sakura Lounge" data-fact="Sushi and a calm setting — bonus points for chopstick skills. 🍣"><span class="restaurant-content"><b>Sakura Lounge</b><small>DHA · Japanese</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Chaaye Khana" data-fact="Chai and comfort food — the low-pressure, easy-conversation option. 🫖"><span class="restaurant-content"><b>Chaaye Khana</b><small>Gulberg · Café / Pakistani</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Butlers Pizza" data-fact="Straightforward, always good, zero risk of a bad choice. 🍕"><span class="restaurant-content"><b>Butlers Pizza</b><small>Multiple · Pizza</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Freddy's Café" data-fact="Casual and unpretentious — a good 'let's just talk' spot. 🥪"><span class="restaurant-content"><b>Freddy's Café</b><small>Gulberg · Café</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Café Barbera" data-fact="Italian coffee culture, imported straight to DHA. Espresso snobs welcome. ☕"><span class="restaurant-content"><b>Café Barbera</b><small>DHA · Italian Café</small></span></label>
+      <label class="restaurant-option"><input type="radio" name="restaurant" value="Mei Fung Chinese" data-fact="Old-school Chinese food that's been a Lahore favorite for years. 🥟"><span class="restaurant-content"><b>Mei Fung Chinese</b><small>Gulberg · Chinese</small></span></label>
+      <label class="restaurant-option other-option"><input type="radio" name="restaurant" value="other" id="otherRadio" data-fact="Bold choice. Type it in below. 👇"><span class="restaurant-content"><b>Other</b><small>Type your own pick</small></span></label>
+    </div>
+    <input type="text" id="otherInput" class="other-input" placeholder="Where do you actually want to go?" maxlength="60">
+    <p class="fun-fact" id="funFact"></p>
+
+    <button class="main-btn" id="restaurantBtn">Perfect choice ✨</button>
+  </div>
+</section>
+
+<section id="summaryPage" class="page">
+  <div class="card">
+    <div class="icon">🥂</div>
+    <span class="eyebrow">THE PLAN IS SET</span>
+    <h1>So it's a<br><span>date?</span> 👀</h1>
+    <div class="summary-box">
+      <p>🏎️ <b>Go-Carting</b></p>
+      <p>📅 <span id="summaryDate"></span></p>
+      <p>⏰ <span id="summaryTime"></span></p>
+      <p>🍽️ <span id="summaryRestaurant"></span></p>
+    </div>
+    <p class="sub">Honestly... I think this is going to be fun. ❤️</p>
+    <button class="main-btn" id="thankBtn">Thank You 💖</button>
+  </div>
+</section>
+
+<section id="finalPage" class="page">
+  <div class="card final-card">
+    <div class="celebrate">✨🏎️🍽️✨</div>
+    <span class="eyebrow">CONFIRMED</span>
+    <h1>Thank <span>You</span> ❤️</h1>
+    <p class="final-text">For saying yes to the race,<br>choosing the dinner spot,<br>and making this little plan possible. 🥹</p>
+    <div class="final-line">Now all that's left is...</div>
+    <div class="big-text">SHOWING UP. 😌</div>
+    <div class="countdown" id="countdown"></div>
+    <p class="tiny">I'll see you at the starting line. 🏁</p>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
